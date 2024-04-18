@@ -1,0 +1,249 @@
+html{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    
+}
+
+@font-face {
+    font-family: 'Zakrito';
+    src: url('../fonts/ZAKRITO\ 2024\ MAR.otf');
+}
+li{
+    list-style: none;
+    display: flex;
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+    color: #000;
+    text-decoration: none;
+}
+body{
+    font-family: 'Zakrito';
+    max-height: calc(100% - 16px);
+    max-width:  calc(100vw - 16px);
+    border-radius: 12px;
+    font-weight: 400;
+    background-color: #F44725;
+    margin: 8px;
+    position: relative;
+}
+.wrapper{
+    display: flex;
+}
+.arrow_link{
+    width: 20px;
+    height: 12px;
+}
+.left_page{
+    margin-left:  clamp(24px, 2.2vw, 32px);
+    width: 50%;
+    height: 100vh;
+}
+.name{
+    padding-top: clamp(24px, 3.5vh, 32px);
+    
+    margin-bottom: clamp(60px, 7.1vh, 64px);
+    font-size: 24px;
+    line-height: 20px;
+}
+.about{
+    line-height: 32px;
+    font-size: 32px;
+    margin-bottom: clamp(84px,9.3vh,200px);
+}
+.head_hunter{
+    line-height: 32px;
+    font-size: 32px;
+    
+}
+.list{
+    padding: 0;
+    width: 630px;
+    position: absolute;
+    bottom: 151px;
+}
+.list ul{
+    padding-left: 0;
+    
+}
+.list li{
+    line-height: 24px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+}
+.list li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px; 
+    background-color: #000; 
+    top: 70px; 
+    
+}
+.list li:last-child::after {
+    display: none; /* Скрыть псевдоэлемент у последнего элемента */
+  }
+.list li {
+    font-size: 24px;
+    
+}
+h5{
+    font-size: 16px;
+}
+.links{
+    position: absolute;
+    z-index: 0;
+    width: 446px;
+    height: 40px;
+}
+.buttons{
+    position: absolute;
+    bottom: 32px;
+    width: 446px;
+    height: 40px;
+    margin-left: -4px;
+}
+.buttons a{
+    z-index: 700;
+    position: fixed;
+    display: block;
+    bottom: 40px;
+    height: 40px;
+}
+.behance{
+    display: block;
+    bottom: 40px;
+    height: 40px;
+    width: 100px;
+    margin-left: 4px;
+}
+.telegram{
+    width: 130px;
+    margin-left: 110px;
+}
+.soap{
+    width: 210px;
+    margin-left: 240px;
+}
+
+
+
+
+
+.right_page{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden; 
+    margin-top: 104px;
+  }
+  
+  .slider {
+    white-space: nowrap; /* Обеспечивает, чтобы изображения не переносились на новую строку */
+    transition: transform 0.5s ease; /* Анимация переключения слайдов */
+  }
+  
+  .slider img {
+    display: inline-block; /* Отображаем изображения как блочные элементы внутри слайдера */
+    width: 100%; /* Занимают всю ширину слайдера */
+    vertical-align: top; /* Избегаем лишних пробелов между изображениями */
+  }
+  .slider .slide {
+    display: none;
+  }
+  
+  .slider .slide.active {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .popup-img {
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    
+  }
+  
+  .popup-text {
+    position: fixed;
+    bottom: 32px;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .popup-text-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999999999;
+  }
+  
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+  }
+  
+  .prev-btn {
+    left: 20px;
+  }
+  
+  .next-btn {
+    right: 20px;
+  }
+  .refresh{
+    font-size: 32px;
+    position: absolute;
+    bottom: 76px;
+  }
