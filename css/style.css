@@ -30,6 +30,7 @@ body{
     margin: 8px;
     position: relative;
 }
+.mobile_about{display: none;}
 .wrapper{
     display: flex;
 }
@@ -53,7 +54,7 @@ body{
 .about{
     line-height: 32px;
     font-size: 32px;
-    margin-bottom: clamp(84px,9.3vh,200px);
+    margin-bottom: clamp(55px,9.3vh,200px);
 }
 .head_hunter{
     line-height: 32px;
@@ -62,7 +63,7 @@ body{
 }
 .list{
     padding: 0;
-    width: 100%;
+    width: 90.5%;
     position: absolute;
     bottom: 151px;
 }
@@ -146,7 +147,10 @@ h5{
     align-items: center;
     
 }
-
+.pine_img{
+  width: 175px;
+  height: 384px;
+}
 .slider-container {
   position: relative;
   overflow: hidden; 
@@ -160,7 +164,6 @@ h5{
 
 .slider img {
   display: inline-block; /* Отображаем изображения как блочные элементы внутри слайдера */
-  width: 100%; /* Занимают всю ширину слайдера */
   vertical-align: top; /* Избегаем лишних пробелов между изображениями */
 }
 .slider .slide {
@@ -169,7 +172,6 @@ h5{
 
 .slider .slide.active {
   display: inline-block;
-  width: 100%;
   vertical-align: top;
 }
 .popup {
@@ -246,8 +248,22 @@ h5{
   right: 20px;
 }
 
-
-
+h3{
+  font-size: 20px;
+  font-weight: 400;
+  padding-right: 48px;
+}
+.about_project{
+  position: absolute;
+  font-size: 20px;
+  bottom: 175px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(50% - 16px);
+}
+.about_project p{
+  padding-left: 6px;
+}
   .refresh{
     font-size: 32px;
     position: absolute;
@@ -262,7 +278,7 @@ h5{
   .refresh {
     height: 180px;
     border-radius: 12px;
-    background: #fc6e51;
+    background: #F44725;
     text-decoration: none;  
     transition: background-color 0.6s ease;
     overflow: hidden;
@@ -283,10 +299,108 @@ h5{
     transition: width 0.3s ease, height 0.3s ease;
  }
   .refresh:focus, .refresh:hover {
-    background: #fb512e;
+    background: #F44725;
  }
   .refresh:active:after {
-    width: 600px;
-    height: 600px;
+    width: 1000px;
+    height: 1000px;
  }
   
+
+
+
+
+ @media (max-width:1100px) {
+  .wrapper{
+    flex-direction: column;
+  }
+  .left_page{
+    width: calc(100% - 64px);
+    margin-left: 32px;
+    height: auto;
+  }
+  .about{
+    margin-bottom: 40px;
+  }
+  
+  .list{
+    position: static;
+    width: 100%;
+    margin-top: 24px;
+  }
+  .list li::after{ 
+    top: 0; 
+    
+}
+  li.hide {
+    display: none;
+  }
+  .buttons{
+    display: none;
+  }
+  .right_page{
+    width: 100%;
+  }
+  .slider-container{
+  margin-top: 20px;
+  }
+  .about_project{
+    width: 100%;
+    padding-left: 25px;
+  
+  }
+  h3{
+    padding-right: 33px;
+  }
+  .pine_img{
+    width: 141px;
+    height: 310px;
+  }
+  .refresh{
+    width: 100%;
+  }
+ }
+ @media (max-width: 640px) {
+    .left_page{
+      width: calc(100% - 16px);
+      margin-left: 24px;
+    }
+    .name{
+      padding-top: 24px;
+    }
+    .head_hunter{
+      position: absolute;
+      font-size: 24px;
+      top: 18px;
+      right: 32px;
+    }  
+    .mobile_about{
+      display: block;
+    }
+    .desktop_about{
+      display: none;
+    }
+    .name{
+      margin-bottom: 60px;
+    }
+    .list{
+      display: none;
+    }
+    .slider-container{
+      margin-top: 55px;
+    }
+    .pine_img{
+      width: 127px;
+      height: 278px;
+    }
+    h3{
+      padding-right: 25px;
+    }
+    .about_project{
+      bottom: 92px;
+      padding-left: 17px;
+    }
+    .refresh{
+      height: 102px;
+    }
+ }
