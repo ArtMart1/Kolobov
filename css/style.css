@@ -33,6 +33,7 @@ body{
 .mobile_about{display: none;}
 .wrapper{
     display: flex;
+    max-height: calc(100vh - 16px);
 }
 .arrow_link{
     width: 20px;
@@ -256,28 +257,24 @@ h5{
   transform: rotate(180deg);
 }
 .prev-btn:hover circle{
-  transition: fill 1s;
+  transition:  1s;
   fill: white;
 }
 
 .next-btn {
   right: 20px;
   justify-content: end;
-  transition: fill 1s !important;
+  transition:  1s !important;
 }
 .next-btn circle {
-  transition: fill 1s !important; /* добавляем плавность только для свойства fill */
+  transition:  1s; 
 }
 
 .next-btn:hover circle {
   fill: white;
 }
 
-.close-btn::before {
-  content: ""; /* Обязательно указывать контент для псевдоэлемента */
-  background-image: url("путь_к_изображению_для_крестика");
-  /* Другие стили для крестика */
-}
+
 
 h3{
   font-size: 20px;
@@ -389,6 +386,7 @@ h3{
   }
   .refresh{
     width: 100%;
+    height: 120px;
   }
  }
  @media (max-width: 640px) {
@@ -407,6 +405,8 @@ h3{
     }  
     .mobile_about{
       display: block;
+      font-size: 28px;
+      line-height: 28px;
     }
     .desktop_about{
       display: none;
@@ -433,5 +433,25 @@ h3{
     }
     .refresh{
       height: 102px;
+    }
+ }
+ @media (max-height: 750px) {
+    .name{
+      margin-bottom: 30px;
+    }
+    .about{
+      margin-bottom: 30px;
+    }
+    .list{
+      bottom: 100px;
+    }
+    .about_project{
+      bottom: 124px;
+    }
+    .slider-container{
+      margin-top: 40px;
+    }
+    .refresh{
+      height: 145px;
     }
  }
