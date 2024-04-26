@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const imageData = coverData.images[index];
     popupImg.src = imageData.src;
     popupText.innerText = imageData.description;
-    popupImg.style.transform = 'scale(1.85)';
     popup.style.display = 'block';
     popupOpen = true;
     clearInterval(timer);
@@ -51,10 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Скрываем основной слайдер при открытии попапа
     slider.style.display = 'none';
 
-    // Устанавливаем активный слайд в попапе
-    const popupSlides = document.querySelectorAll('.popup .slide');
-    popupSlides.forEach(slide => slide.classList.remove('active'));
-    popupSlides[index].classList.add('active');
+  
 
     // Обновляем индекс текущего активного слайда в попапе
     currentSlide = index;

@@ -62,11 +62,26 @@ body{
     font-size: 32px;
     
 }
+.tablet_links{
+  display: none;
+}
 .list{
     padding: 0;
     width: 90.5%;
     position: absolute;
     bottom: 151px;
+   
+    
+
+}
+.list::before{
+  content: '';
+  position: absolute;
+  top: -32px;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, #F44725 10%);
+
 }
 .list ul{
     padding-left: 0;
@@ -280,6 +295,7 @@ h3{
   font-size: 20px;
   font-weight: 400;
   padding-right: 48px;
+  z-index: 999;
 }
 .about_project{
   position: absolute;
@@ -289,8 +305,17 @@ h3{
   justify-content: space-between;
   width: calc(50% - 16px);
 }
+.about_project::before{
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  background: linear-gradient(to bottom, transparent 0%, #F44725 40%);
+}
 .about_project p{
   padding-left: 6px;
+  z-index: 999;
 }
   .refresh{
     font-size: 32px;
@@ -350,11 +375,24 @@ h3{
   .about{
     margin-bottom: 40px;
   }
-  
+  .head_hunter.hide{
+    display: none;
+  }
+  .tablet_links{
+    display: flex;
+    
+  }
+  .tablet_links a{
+    font-size: 32px;
+  }
   .list{
     position: static;
     width: 100%;
     margin-top: 24px;
+    display: none;
+  }
+  .list::before{
+    display: none;
   }
   .list li::after{ 
     top: 0; 
@@ -375,6 +413,7 @@ h3{
   .about_project{
     width: 100%;
     padding-left: 25px;
+    bottom: 100px;
   
   }
   h3{
@@ -386,7 +425,7 @@ h3{
   }
   .refresh{
     width: 100%;
-    height: 120px;
+    height: 100px;
   }
  }
  @media (max-width: 640px) {
@@ -403,6 +442,7 @@ h3{
       top: 18px;
       right: 32px;
     }  
+   
     .mobile_about{
       display: block;
       font-size: 28px;
@@ -413,6 +453,12 @@ h3{
     }
     .name{
       margin-bottom: 60px;
+    }
+    .tablet_links{
+      display: none;
+    }
+    .head_hunter.hide{
+      display: block;
     }
     .list{
       display: none;
@@ -435,7 +481,7 @@ h3{
       height: 102px;
     }
  }
- @media (max-height: 750px) {
+ @media (max-height: 770px) {
     .name{
       margin-bottom: 30px;
     }
@@ -446,12 +492,12 @@ h3{
       bottom: 100px;
     }
     .about_project{
-      bottom: 124px;
+      bottom: 102px;
     }
     .slider-container{
       margin-top: 40px;
     }
     .refresh{
-      height: 145px;
+      height: 102px;
     }
  }
